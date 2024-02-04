@@ -22,6 +22,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </head>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
+
+
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="w3-container">
@@ -33,15 +35,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <p class="w3-text-grey">UiTM Cawangan Kelantan</p>
   </div>
   <div class="w3-bar-block">
-    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Home</a>
+    <a href="/BCM/index.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Home (Guest)</a>
     <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
     <a href="#membership" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>MEMBERSHIP</a> 
     <a href="#committee" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>COMMITTEE</a> 
     <a href="#activity" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ACTIVITY</a> 
     <a href="#achievement" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ACHIEVEMENT</a> 
-
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-    <a href="admin/index.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>ADMINISTRATOR</a>
 
   </div>
   <div class="w3-panel w3-large">
@@ -65,6 +65,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <p align= "center"></p>
 <div class="w3-container w3-padding-64 w3-center"
 
+
+
   <!-- Header -->
   <header id="portfolio">
     <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
@@ -83,26 +85,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
   </div>
 
-  
-  <header id="membership">  
-
-    <h4><b>Bikers Club Membership</b></h4>
-    <!-- Progress bars / Skills -->
-    
-    <?php
-
-    if (isset($_GET["msg"])) {
-      $msg = $_GET["msg"];
-      echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-      ' . $msg . '
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
-    }
-    ?>
-	
-	
-	
-	<p align="center"><h3>Membership form for Bikers Club Motorcycle 2024</h3></p>
+  <header id="membership">
+  <p align="center"><h3>Membership form for Bikers Club Motorcycle 2024</h3></p>
     <a href="add-new.php" class="btn btn-dark mb-3">Add New</a>
 
     <table class="table table-hover text-center">
@@ -113,6 +97,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
           <th scope="col">Last Name</th>
           <th scope="col">Email</th>
           <th scope="col">Gender</th>
+          <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -128,7 +113,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
             <td><?php echo $row["last_name"] ?></td>
             <td><?php echo $row["email"] ?></td>
             <td><?php echo $row["gender"] ?></td>
-          
+            <td>
+              <a href="edit_membership.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
+              <a href="delete_membership.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
+            </td>
           </tr>
         <?php
         }
@@ -136,6 +124,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       </tbody>
     </table>
   </div>
+
 
     </p>
     <hr>
@@ -147,7 +136,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <div class="w3-main" style="margin-center:300px">
 
   <!-- Header -->
+  
   <header id="committee">
+  <p align= "center"></p>
+
     <a href="committee"><img src="photo/convoi.png" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
@@ -186,13 +178,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
  
 
 
-</div>
+   
+    
+ <hr> 
 
-
-<div class="w3-row"><br>
-<div class="w3-row"><br>
-<div class="w3-row"><br>
-<div class="w3-row"><br>
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
@@ -206,7 +195,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
     <h1><b>Activity in our Bikers Club</b></h1>
-    
     <div class="w3-section w3-bottombar w3-padding-16">
    
     </div>
@@ -245,7 +233,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
  <p align="center"><h3>Activities Minutes of BIKERS CLUB</h3></p>
  <a href="add_activity.php" class="btn btn-dark mb-3">Add New</a>
 
-
     <table class="table table-hover text-center">
       <thead class="table-dark">
         <tr>
@@ -253,7 +240,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
           <th scope="col">Activity Name</th>
           <th scope="col">Activity Date</th>
           <th scope="col">Club ID</th>
-          
+          <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -269,7 +256,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
             <td><?php echo $row["activity_date"] ?></td>
             <td><?php echo $row["club_id"] ?></td>
             <td>
-             
+              <a href="edit_activity.php?activity_id=<?php echo $row["activity_id"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
+              <a href="delete_activity.php?activity_id=<?php echo $row["activity_id"] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
             </td>
           </tr>
 
@@ -282,6 +270,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
   <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
 
 
     <hr>
@@ -332,6 +321,45 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
  
 
   <!-- Contact Section -->
+  <a href="add_contact.php" class="btn btn-dark mb-3">Add New</a>
+
+    <table class="table table-hover text-center">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Contact ID</th>
+          <th scope="col">Contact Name</th>
+          <th scope="col">Student ID</th>
+          <th scope="col">Email</th>
+          <th scope="col">Description</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+   
+        <?php
+        $sql = "SELECT * FROM contact";
+        $result = mysqli_query($conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+        ?>
+          <tr>
+            <td><?php echo $row["contact_id"] ?></td>
+            <td><?php echo $row["contact_name"] ?></td>
+            <td><?php echo $row["contact_studid"] ?></td>
+          
+            <td><?php echo $row["contact_email"] ?></td>
+            <td><?php echo $row["contact_desc"] ?></td>
+            <td>
+              <a href="edit_contact.php?contact_id=<?php echo $row["contact_id"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
+              <a href="delete_contact.php?contact_id=<?php echo $row["contact_id"] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
+            </td>
+          </tr>
+        <?php
+        }
+        ?>
+      </tbody>
+    </table>
+  </div>
+
   <div class="w3-container w3-padding-large w3-grey">
     <h4 id="contact"><b>Contact Us</b></h4>
     <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>UiTMCK Club Information System</title>
+<title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -12,7 +12,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
 </head>
 <body class="w3-light-grey">
-
 
 <!-- Top container -->
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
@@ -39,11 +38,15 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </div>
   <div class="w3-bar-block">
     <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-    <a href="index.php" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Home</a>
-    <a href="membership.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Memberships</a>
-    <a href="activity.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Activities</a>
-    <a href="contact.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Comments</a>
-   <br><br>
+    <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Views</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Traffic</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Geo</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  News</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
   </div>
 </nav>
 
@@ -55,8 +58,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <div class="w3-main" style="margin-left:300px;margin-top:43px;">
 
   <!-- Header -->
-
-  
   <header class="w3-container" style="padding-top:22px">
     <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
   </header>
@@ -69,7 +70,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
           <h3>52</h3>
         </div>
         <div class="w3-clear"></div>
-        <h4>Comments</h4>
+        <h4>Messages</h4>
       </div>
     </div>
     <div class="w3-quarter">
@@ -79,7 +80,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
           <h3>99</h3>
         </div>
         <div class="w3-clear"></div>
-        <h4>Activities</h4>
+        <h4>Views</h4>
       </div>
     </div>
     <div class="w3-quarter">
@@ -89,7 +90,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
           <h3>23</h3>
         </div>
         <div class="w3-clear"></div>
-        <h4>Comments</h4>
+        <h4>Shares</h4>
       </div>
     </div>
     <div class="w3-quarter">
@@ -99,12 +100,14 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
           <h3>50</h3>
         </div>
         <div class="w3-clear"></div>
-        <h4>Memberships</h4>
+        <h4>Users</h4>
       </div>
     </div>
   </div>
 
-
+  <div class="w3-panel">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      
 
   <!-- Footer -->
   <footer class="w3-container w3-padding-16 w3-light-grey">
@@ -139,5 +142,6 @@ function w3_close() {
   overlayBg.style.display = "none";
 }
 </script>
+
 </body>
 </html>

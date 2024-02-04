@@ -6,15 +6,13 @@ if (isset($_POST["submit"])) {
    $last_name = $_POST['last_name'];
    $email = $_POST['email'];
    $gender = $_POST['gender'];
-   $username = $_POST['username'];
-   $password = $_POST['password'];
 
-   $sql = "INSERT INTO `members`(`id`, `first_name`, `last_name`, `email`, `gender`, `username`, `password`) VALUES (NULL,'$first_name','$last_name','$email','$gender','$username','$password')";
+   $sql = "INSERT INTO `members`(`id`, `first_name`, `last_name`, `email`, `gender`) VALUES (NULL,'$first_name','$last_name','$email','$gender')";
 
    $result = mysqli_query($conn, $sql);
 
    if ($result) {
-      header("Location: index.php?msg=New record created successfully");
+      header("Location: membership.php?msg=New record created successfully");
    } else {
       echo "Failed: " . mysqli_error($conn);
    }
@@ -39,12 +37,12 @@ if (isset($_POST["submit"])) {
    <!-- Font Awesome -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-   <title>Bikers Club Motorcycle (BCM)</title>
+   <title>PHP CRUD Application</title>
 </head>
 
 <body>
    <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: #00ff5573;">
-   Bikers Club Motorcycle (BCM)
+      PHP Complete CRUD Application
    </nav>
 
    <div class="container">
@@ -80,16 +78,6 @@ if (isset($_POST["submit"])) {
                &nbsp;
                <input type="radio" class="form-check-input" name="gender" id="female" value="female">
                <label for="female" class="form-input-label">Female</label>
-            </div>
-
-            <div class="mb-3">
-               <label class="form-label">Username:</label>
-               <input type="text" class="form-control" name="Username" placeholder="Please insert your username">
-            </div>
-
-            <div class="mb-3">
-               <label class="form-label">Email:</label>
-               <input type="password" class="form-control" name="password" placeholder="Insert your password">
             </div>
 
             <div>

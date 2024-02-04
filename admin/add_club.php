@@ -2,19 +2,17 @@
 include "db_conn.php";
 
 if (isset($_POST["submit"])) {
-   $first_name = $_POST['first_name'];
-   $last_name = $_POST['last_name'];
-   $email = $_POST['email'];
-   $gender = $_POST['gender'];
-   $username = $_POST['username'];
-   $password = $_POST['password'];
+   $club_name = $_POST['club_name'];
+   $club_owner = $_POST['club_owner'];
+   $club_type = $_POST['club_type'];
+   
 
-   $sql = "INSERT INTO `members`(`id`, `first_name`, `last_name`, `email`, `gender`, `username`, `password`) VALUES (NULL,'$first_name','$last_name','$email','$gender','$username','$password')";
+   $sql = "INSERT INTO `club`(`club_id`, `club_name`, `club_owner`, `club_type`) VALUES (NULL,'$club_name','$club_owner','$club_type')";
 
    $result = mysqli_query($conn, $sql);
 
    if ($result) {
-      header("Location: index.php?msg=New record created successfully");
+      header("Location: club.php?msg=New record created successfully");
    } else {
       echo "Failed: " . mysqli_error($conn);
    }
@@ -39,12 +37,12 @@ if (isset($_POST["submit"])) {
    <!-- Font Awesome -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-   <title>Bikers Club Motorcycle (BCM)</title>
+   <title>PHP CRUD Application</title>
 </head>
 
 <body>
    <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: #00ff5573;">
-   Bikers Club Motorcycle (BCM)
+      PHP Complete CRUD Application
    </nav>
 
    <div class="container">
@@ -57,39 +55,25 @@ if (isset($_POST["submit"])) {
          <form action="" method="post" style="width:50vw; min-width:300px;">
             <div class="row mb-3">
                <div class="col">
-                  <label class="form-label">First Name:</label>
-                  <input type="text" class="form-control" name="first_name" placeholder="Albert">
+                  <label class="form-label">Club Name:</label>
+                  <input type="text" class="form-control" name="club_name" placeholder="Please insert your club name">
                </div>
 
                <div class="col">
-                  <label class="form-label">Last Name:</label>
-                  <input type="text" class="form-control" name="last_name" placeholder="Einstein">
+                  <label class="form-label">Club Ownership:</label>
+                  <input type="text" class="form-control" name="club_owner" placeholder="Who is the club owner">
                </div>
             </div>
 
-            <div class="mb-3">
-               <label class="form-label">Email:</label>
-               <input type="email" class="form-control" name="email" placeholder="name@example.com">
-            </div>
-
+            
             <div class="form-group mb-3">
-               <label>Gender:</label>
+               <label>Club Type:</label>
                &nbsp;
-               <input type="radio" class="form-check-input" name="gender" id="male" value="male">
-               <label for="male" class="form-input-label">Male</label>
+               <input type="radio" class="form-check-input" name="club_type" id="Academic Club" value="Academic Club">
+               <label for="Academic Club" class="form-input-label">Academic Club</label>
                &nbsp;
-               <input type="radio" class="form-check-input" name="gender" id="female" value="female">
-               <label for="female" class="form-input-label">Female</label>
-            </div>
-
-            <div class="mb-3">
-               <label class="form-label">Username:</label>
-               <input type="text" class="form-control" name="Username" placeholder="Please insert your username">
-            </div>
-
-            <div class="mb-3">
-               <label class="form-label">Email:</label>
-               <input type="password" class="form-control" name="password" placeholder="Insert your password">
+               <input type="radio" class="form-check-input" name="club_type" id="Non-Academic Club" value="Non-Academic Club">
+               <label for="Non-Academic Club" class="form-input-label">Non-Academic Club</label>
             </div>
 
             <div>
