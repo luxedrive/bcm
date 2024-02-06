@@ -156,6 +156,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <img src="photo/yusuf.jpg" alt="Group Ride and Charity Event" style="width:100%" class="w3-hover-opacity">
       <div class="w3-container w3-white">
         <p><b>Yusuf</b></p>
+        <p><b>MasterMind</b></p>
 
       </div>
     </div>
@@ -163,18 +164,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <img src="photo/ajik.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
       <div class="w3-container w3-white">
         <p><b>Haziq Naqi</b></p>
+        <p><b>Executor</b></p>
       </div>
     </div>
     <div class="w3-third w3-container">
       <img src="photo/kimi.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
       <div class="w3-container w3-white">
         <p><b>Zulhakimi</b></p>
+        <p><b>Personal Assistant</b></p>
       </div>
     </div>
-  </div>
+  </div> 
+
    
-    
- <hr> 
  
 
 

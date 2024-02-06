@@ -12,7 +12,7 @@ if (isset($_POST["submit"])) {
    
 
 
-   $sql = "INSERT INTO `contact`(`contact_id`, `contact_name`, `contact_studid`, `contact_phone`, `contact_email`,`contact_desc`) VALUES (NULL,'$contact_name','$contact_studid','$contact_phone', $contact_email','$contact_desc')";
+   $sql = "INSERT INTO `contact`(`contact_id`, `contact_name`, `contact_studid`, `contact_phone`, `contact_email`,`contact_desc`) VALUES (NULL,'$contact_name','$contact_studid','$contact_phone', '$contact_email','$contact_desc')";
 
    $result = mysqli_query($conn, $sql);
 
@@ -42,12 +42,12 @@ if (isset($_POST["submit"])) {
    <!-- Font Awesome -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-   <title>PHP CRUD Application</title>
+   <title>Contact Digital Dialogue Club</title>
 </head>
 
 <body>
-   <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: #00ff5573;">
-     Contact Us Form for UiTMCK Club Management System
+   <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: #F0E68C;">
+     Contact Us Form for Digital Dialogue Club
    </nav>
 
    <div class="container">
